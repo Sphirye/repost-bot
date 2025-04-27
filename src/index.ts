@@ -12,7 +12,7 @@ client.once("ready", async () => {
   console.log("Discord bot is ready! 🤖");
   await BaseUtil.initialize(client)
 
-  await sendRandomMessage()
+  set24HourTimeout()
 });
 
 client.login(Constants.DISCORD_TOKEN);
@@ -28,7 +28,9 @@ async function sendRandomMessage() {
 
   const randomMessage = MessageUtil.getRandomMessage(messages)
   MessageUtil.sendMessage(randomMessage)
-
 }
 
-
+function set24HourTimeout() {
+  setTimeout(set24HourTimeout, 24 * 60 * 60 * 1000)
+  sendRandomMessage()
+}
