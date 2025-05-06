@@ -15,6 +15,8 @@ client.once("ready", async () => {
   set24HourTimeout()
 });
 
+client.login(Constants.DISCORD_TOKEN);
+
 async function sendRandomMessage() {
   let messages: Message<boolean>[] = []
 
