@@ -7,6 +7,6 @@ export default class Constants {
   static readonly GUILD_ID = process.env.GUILD_ID
   static readonly ORIGIN_CHANNEL_IDS = process.env.ORIGIN_CHANNEL_IDS?.split(",")
   static readonly ALLOWED_CONTENT_TYPES = process.env.ALLOWED_CONTENT_TYPES?.split(",")
-  static readonly REPOST_INTERVAL_IN_HOURS = process.env.REPOST_INTERVAL_IN_HOURS
+  static readonly REPOST_INTERVAL_IN_HOURS = Number(process.env.REPOST_INTERVAL_IN_HOURS)
   static readonly TARGET_CHANNEL_ID = process.env.TARGET_CHANNEL_ID
 }
