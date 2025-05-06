@@ -31,6 +31,6 @@ async function sendRandomMessage() {
 }
 
 function set24HourTimeout() {
-  setTimeout(set24HourTimeout, 24 * 60 * 60 * 1000)
+  setTimeout(set24HourTimeout, Constants.REPOST_INTERVAL_IN_HOURS * 60 * 60 * 1000)
   sendRandomMessage()
 }
